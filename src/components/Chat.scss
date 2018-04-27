@@ -1,0 +1,34 @@
+@import '../styles/_mixins.scss';
+
+.chat {
+  margin-bottom: 10px;
+
+  @include breakpoint(medium) {
+    width: 49%;
+    margin: 1%;
+
+    &:nth-of-type(2n+1) {
+      margin-left: 0;
+    }
+    &:nth-of-type(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @include breakpoint(large) {
+    width: 32%;
+
+    &:nth-of-type(2n+1) {
+      margin-left: auto;
+    }
+    &:nth-of-type(2n) {
+      margin-right: auto;
+    }
+    &:nth-of-type(3n+1) {
+      margin-left: 0;
+    }
+    &:nth-of-type(3n) {
+      margin-right: 0;
+    }
+  }
+}
