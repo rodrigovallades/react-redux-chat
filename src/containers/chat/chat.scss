@@ -1,3 +1,10 @@
-.github-login {
+@import '../../styles/_mixins.scss';
+
+.chats {
   margin-top: 10px;
+
+  @include breakpoint(medium) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

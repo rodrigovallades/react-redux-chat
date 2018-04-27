@@ -39,7 +39,9 @@ export class Chats extends Component {
     return (
       <div>
         <Grid>
-          {this.renderChats()}
+          <div className='chats'>
+            {this.renderChats()}
+          </div>
           <button onClick={this.addChat}>Add chat</button>
         </Grid>
       </div>
@@ -48,7 +50,7 @@ export class Chats extends Component {
 };
 
 const mapStateToProps = state => ({
-  chats: state.chats.chats
+  chats: state.chats
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({

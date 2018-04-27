@@ -1,13 +1,15 @@
-const initialState = { chats: [] };
+const initialState = [];
 
 // action creators
 export default (state = initialState, action) => {
   switch (action.type) {
     case 'addChat':
-      return {
+      return [
         ...state,
-        loading: true
-      };
+        {
+          title: `Chat ${state.length+1}`
+        }
+      ];
     default:
       return state
   }
